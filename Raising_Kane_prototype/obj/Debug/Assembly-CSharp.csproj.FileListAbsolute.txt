@@ -1,0 +1,2 @@
+C:\Users\u1082216\Documents\GitHub\Raising-Kane-Prototype-2D\CapstonePrototype\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\u1082216\Documents\GitHub\Raising-Kane-Prototype-2D\CapstonePrototype\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
