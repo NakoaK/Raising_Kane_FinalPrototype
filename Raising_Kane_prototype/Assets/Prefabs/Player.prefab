@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666921006957076816}
   - component: {fileID: 1666921006957076817}
+  - component: {fileID: 2384404239629906804}
   - component: {fileID: 1666921006957076823}
   - component: {fileID: 1666921006957076818}
   - component: {fileID: 1666921006957076830}
@@ -117,7 +118,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1666921006957076823
+--- !u!114 &2384404239629906804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,6 +126,34 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666921006957076831}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e48e97cec55dba41b21558003c2e297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0.3
+  attackCenterR: {fileID: 1666921005608445567}
+  attackX: 2.35
+  attackY: 1.19
+  IsEnemy:
+    serializedVersion: 2
+    m_Bits: 256
+  attackSprite1: {fileID: 21300000, guid: a7e568b9ef203b8468e7119eac6a2e92, type: 3}
+  attackSprite1_left: {fileID: 21300000, guid: f37fae157ca74744ba46748ff216b08a, type: 3}
+  attackSprite2: {fileID: 21300000, guid: 7fc23cc4d9349e34190d76c532f965cc, type: 3}
+  attackSprite2_left: {fileID: 21300000, guid: 3bd2fd885810e6b43a39c1da3bbd6e5f, type: 3}
+  idleSprite: {fileID: 21300000, guid: a5a764bf8d7e5e9448fb2a203315ab6b, type: 3}
+  idleSpriteL: {fileID: 21300000, guid: f6f15a0c15aa24741b2a93f448d46569, type: 3}
+  HUG_ATTACK: {fileID: 21300000, guid: c9ee73b7f45fec64f989d8712d8ada98, type: 3}
+  playerSpriteRenderer: {fileID: 0}
+  damage: 1
+--- !u!114 &1666921006957076823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666921006957076831}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b47a85c91aec10449f81f9b69a44e61, type: 3}
   m_Name: 
@@ -142,8 +171,10 @@ MonoBehaviour:
   attackSprite2_left: {fileID: 21300000, guid: 3bd2fd885810e6b43a39c1da3bbd6e5f, type: 3}
   idleSprite: {fileID: 21300000, guid: a5a764bf8d7e5e9448fb2a203315ab6b, type: 3}
   idleSpriteL: {fileID: 21300000, guid: f6f15a0c15aa24741b2a93f448d46569, type: 3}
+  HUG_ATTACK: {fileID: 0}
   playerSpriteRenderer: {fileID: 0}
   damage: 1
+  isAttacking: 0
 --- !u!114 &1666921006957076818
 MonoBehaviour:
   m_ObjectHideFlags: 0
