@@ -528,7 +528,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Kane_Other
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Documents\GitHub\Raising_Kane_FinalPrototype\Raising_Kane_prototype
+  m_LastProjectPath: C:\Users\tails\Desktop\SENIOR PROJECT\Final\Raising_Kane_FinalPrototype\Raising_Kane_prototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -551,7 +551,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 11}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
