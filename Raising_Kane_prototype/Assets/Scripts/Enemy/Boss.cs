@@ -21,7 +21,7 @@ public class Boss : MonoBehaviour
     private bool playerInRange;
     private bool playerAttacked;
     private float playerHealth;
-    private ComboSystem COMBO_SYSTEM;
+    private Old_ComboSystem COMBO_SYSTEM;
     
 
     //creates a Attacking orb???
@@ -42,7 +42,7 @@ public class Boss : MonoBehaviour
     {
         HB = new HealthBar(bossHealth);
 
-        COMBO_SYSTEM = new ComboSystem();
+        COMBO_SYSTEM = new Old_ComboSystem();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
@@ -127,7 +127,7 @@ public class Boss : MonoBehaviour
     //Using the take Damage call from enemy to start the damaging process
     public void TakeDamage(int damage)
     {
-        if (!playerAttacked)
+        if (playerAttacked)
         {
             Unkillable(damage);
         }
@@ -154,14 +154,15 @@ public class Boss : MonoBehaviour
         }
 
         //If player attacks with combos Boss gains health
-        else if (playerInRange == true && COMBO_SYSTEM.isAttacking == true)
+        if (Vector2.Distance(transform.position, player.position) <= distFromBoss &&
+            COMBO_SYSTEM.isAttacking == true && Input.GetKeyDown("space") && bossAttack == true)
         {
             Unkillable(100);
             spr_renderer.sprite = bossAwake;
 
             timeElapsed = attackDelay;
             bossAttack = true;
-            StartCoroutine(BossAttack(timeElapsed));
+            //StartCoroutine(BossAttack(timeElapsed));
         }
 
         //If Player's far Boss goes to sleep

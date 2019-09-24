@@ -785,12 +785,27 @@ PrefabInstance:
       propertyPath: HbOuter
       value: 
       objectReference: {fileID: 931601531}
+    - target: {fileID: 1666921006957076819, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1666921006957076823, guid: 03369716d86663540818390ba618ba0c,
         type: 3}
       propertyPath: HUG_ATTACK
       value: 
       objectReference: {fileID: 21300000, guid: c9ee73b7f45fec64f989d8712d8ada98,
         type: 3}
+    - target: {fileID: 1666921006957076823, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384404239629906804, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03369716d86663540818390ba618ba0c, type: 3}
 --- !u!1 &1413723543
