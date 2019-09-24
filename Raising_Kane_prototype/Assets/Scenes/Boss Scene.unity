@@ -682,7 +682,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 46ff326794ca78b4bacf15e3ddc9d5e4,
+      objectReference: {fileID: 21300000, guid: 6962ac883b010304880cc77e9438a20b,
         type: 3}
     - target: {fileID: 9090557752440003362, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
         type: 3}
@@ -706,6 +706,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8d468a8551d72d245aab58f59ac1a37c,
         type: 3}
+    - target: {fileID: 9090557752440003362, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
+        type: 3}
+      propertyPath: bossScream
+      value: 
+      objectReference: {fileID: 21300000, guid: 6962ac883b010304880cc77e9438a20b,
+        type: 3}
+    - target: {fileID: 9090557752440003362, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
+        type: 3}
+      propertyPath: bossPoint
+      value: 
+      objectReference: {fileID: 21300000, guid: fe7dc93da622b93408a1710036e03fe2,
+        type: 3}
+    - target: {fileID: 810359138, guid: 8f5eaa6977dc31c4f9c6c296d39cf147, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 810359138, guid: 8f5eaa6977dc31c4f9c6c296d39cf147, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f5eaa6977dc31c4f9c6c296d39cf147, type: 3}
 --- !u!1001 &1204884547
@@ -788,7 +808,7 @@ PrefabInstance:
     - target: {fileID: 1666921006957076819, guid: 03369716d86663540818390ba618ba0c,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1666921006957076823, guid: 03369716d86663540818390ba618ba0c,
         type: 3}
@@ -806,7 +826,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2384404239629906804, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1666921006957076818, guid: 03369716d86663540818390ba618ba0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03369716d86663540818390ba618ba0c, type: 3}
 --- !u!1 &1413723543
 GameObject:

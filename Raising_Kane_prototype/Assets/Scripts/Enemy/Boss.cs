@@ -12,7 +12,10 @@ public class Boss : MonoBehaviour
     public float distFromBoss;
     public Sprite bossAwake;
     public Sprite bossSleep;
+    public Sprite bossScream;
+    public Sprite bossPoint;
     private SpriteRenderer spr_renderer;
+    private IEnumerator bossAttacks;
 
 
     //Player Variables
@@ -22,6 +25,7 @@ public class Boss : MonoBehaviour
     private bool playerAttacked;
     private float playerHealth;
     private Old_ComboSystem COMBO_SYSTEM;
+    
     
 
     //creates a Attacking orb???
@@ -56,7 +60,7 @@ public class Boss : MonoBehaviour
         //Sprite Renderer start check
         spr_renderer = GetComponent<SpriteRenderer>();
         if (spr_renderer.sprite == null)
-            spr_renderer.sprite = bossAwake; 
+            spr_renderer.sprite = bossScream;
     }
 
     // Update is called once per frame
@@ -64,12 +68,13 @@ public class Boss : MonoBehaviour
     {
         UpdateHealth();
 
+        timeElapsed = attackDelay;
+        bossAttacks = BossAttack(timeElapsed);
+
         if ((playerInRange == true) && (bossAttack == false))
         {
-
-            timeElapsed = attackDelay;
             bossAttack = true;
-            StartCoroutine(BossAttack(timeElapsed));
+            StartCoroutine(bossAttacks);
         }
 
         switchSprite();
@@ -86,6 +91,8 @@ public class Boss : MonoBehaviour
         bossAttack = false;
         asleep = true;
         spr_renderer.sprite = bossSleep;
+
+       // StopCoroutine(bossAttacks);
     }
 
 
@@ -109,19 +116,21 @@ public class Boss : MonoBehaviour
     //Boss's health goes up if it's damaged
     private void Unkillable(int damage)
     {
-        if (!asleep)
+        /*if (!asleep)
         {
             //anim.SetTrigger("take_damage"); // added this as well
             HB.DamageHealth(damage);
            // musicManager.Playsound("enemyDamaged");
             bossHealth += damage;
-            print("boss health: " + bossHealth);
+            print("boss health: " + bossHealth + "++");
         }
 
         else
         {
             playerAttacked = true;
-        }
+        } */ 
+
+        bossHealth += damage;
     }
 
     //Using the take Damage call from enemy to start the damaging process
@@ -150,29 +159,20 @@ public class Boss : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) <= distFromBoss && bossAttack == false)
         {
             playerInRange = true;
-            spr_renderer.sprite = bossAwake;
+            spr_renderer.sprite = bossPoint;
         }
 
         //If player attacks with combos Boss gains health
         if (Vector2.Distance(transform.position, player.position) <= distFromBoss &&
-            COMBO_SYSTEM.isAttacking == true && Input.GetKeyDown("space") && bossAttack == true)
+            Input.GetKeyDown("space") && bossAttack == true)
         {
-            Unkillable(100);
-            spr_renderer.sprite = bossAwake;
+            //Unkillable(100);
+            spr_renderer.sprite = bossPoint;
 
-            timeElapsed = attackDelay;
             bossAttack = true;
-            //StartCoroutine(BossAttack(timeElapsed));
+
+            StartCoroutine(bossAttacks);
         }
-
-        //If Player's far Boss goes to sleep
-        /*else if (Vector2.Distance(transform.position, player.position) > distFromBoss 
-                 && bossAttack == false && bossAwake)
-        {
-            playerInRange = false;
-
-            Sleep();
-        }*/
 
         //If Player's close and Hugs instead, Boss goes to sleep and is now killable
         if (Vector2.Distance(transform.position, player.position) <= distFromBoss &&
@@ -183,6 +183,11 @@ public class Boss : MonoBehaviour
             Sleep();
 
             Killable(50);
+        }
+
+        if (spr_renderer.sprite == bossSleep && bossAttack == true)
+        {
+            StopCoroutine(bossAttacks);
         }
     }
 

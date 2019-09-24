@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealth();
         if(health <= 0)
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("Boss Scene");
            // Destroy(this.gameObject);
         }
         
@@ -71,6 +71,6 @@ public class PlayerHealth : MonoBehaviour
         HB.DamageHealth(damage);
         musicManager.Playsound("enemyDamaged");
         health -= damage;
-        print("health: " + health);
+        print("Player health: " + health);
     }
 }
