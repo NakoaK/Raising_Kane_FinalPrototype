@@ -25,5 +25,9 @@ public class SceneManagerScript : MonoBehaviour
         {
             SceneManager.LoadScene("Boss_Sleep");
         }
+        else if (Input.GetKeyDown(KeyCode.U))
+        {
+            SceneManager.LoadScene("Running_Boss");
+        }
     }
 }

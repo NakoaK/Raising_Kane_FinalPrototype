@@ -6,7 +6,7 @@ public class CameraTracking : MonoBehaviour
 {
 
     float xMargin = 3f;
-    float smoothing = 0.5f;
+    float smoothing = 1f;
 
     public GameObject player;
 

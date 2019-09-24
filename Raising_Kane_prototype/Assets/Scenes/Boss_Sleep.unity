@@ -333,12 +333,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9090557752440003360, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8d468a8551d72d245aab58f59ac1a37c,
-        type: 3}
     - target: {fileID: 9090557752440003362, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
         type: 3}
       propertyPath: bossHealth
@@ -354,6 +348,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9090557752440003360, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d468a8551d72d245aab58f59ac1a37c,
+        type: 3}
     - target: {fileID: 810359138, guid: 8f5eaa6977dc31c4f9c6c296d39cf147, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -361,7 +361,7 @@ PrefabInstance:
     - target: {fileID: 7925256178530475229, guid: 8f5eaa6977dc31c4f9c6c296d39cf147,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f5eaa6977dc31c4f9c6c296d39cf147, type: 3}

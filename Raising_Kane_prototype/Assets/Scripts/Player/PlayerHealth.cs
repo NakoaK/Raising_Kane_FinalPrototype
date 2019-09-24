@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     //public float stunDelay;
 
+    private GameObject[] deathTallyObj;
     HealthBar HB;
     public GameObject HbInner;
     public GameObject HbOuter;
@@ -40,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
 
 
        // timeElapsed = attackDelay;
+       deathTallyObj = GameObject.FindGameObjectsWithTag("DeathCounter");
     }
 
     // Update is called once per frame
@@ -48,7 +50,8 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealth();
         if(health <= 0)
         {
-            SceneManager.LoadScene("Boss Scene");
+            deathTallyObj[0].GetComponent<DeathCounter>().incrementDeathCount();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
            // Destroy(this.gameObject);
         }
         

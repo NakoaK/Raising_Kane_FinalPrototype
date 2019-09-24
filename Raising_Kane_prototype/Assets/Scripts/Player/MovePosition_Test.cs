@@ -67,7 +67,7 @@ public class MovePosition_Test : MonoBehaviour
     
     public float GetSpeed()
     {
-        return Input.GetAxis("Horizontal");
+        return Input.GetAxis("Horizontal")*speed;
     }
 
     void moveCharacter(Vector2 direction)
