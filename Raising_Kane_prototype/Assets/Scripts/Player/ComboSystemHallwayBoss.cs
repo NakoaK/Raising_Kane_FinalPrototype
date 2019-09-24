@@ -260,7 +260,7 @@ public class ComboSystemHallwayBoss : MonoBehaviour
         }
 
         isAttacking = true;
-        musicManager.Playsound("Melee1");
+        //musicManager.Playsound("Melee1");
 
         yield return new WaitForSecondsRealtime(.3f);
 
@@ -285,7 +285,7 @@ public class ComboSystemHallwayBoss : MonoBehaviour
         }
 
         isAttacking = true;
-        musicManager.Playsound("Melee2");
+        //musicManager.Playsound("Melee2");
 
         yield return new WaitForSecondsRealtime(.6f);
 

@@ -83,6 +83,8 @@ public class Boss : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
 
     //Turns off attacks and allows the boss to be hit.
@@ -159,7 +161,8 @@ public class Boss : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) <= distFromBoss && bossAttack == false)
         {
             playerInRange = true;
-            spr_renderer.sprite = bossPoint;
+            // DISABLE PERMANENT BOSS POINT!!!! ////////////
+            //spr_renderer.sprite = bossPoint;
         }
 
         //If player attacks with combos Boss gains health
@@ -197,9 +200,13 @@ public class Boss : MonoBehaviour
         AttackObj.SetActive(true);
 
         musicManager.Playsound("enemyAttack");
+        // THIS IS WHERE I CHANGE IT!!!! ////////
+        spr_renderer.sprite = bossPoint;
         print("EnemyAttack");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
+        // THIS IS WHERE I CHANGE IT BACK!!! //////////////
+        spr_renderer.sprite = bossAwake;
         AttackObj.SetActive(false);
         bossAttack = false;
     }

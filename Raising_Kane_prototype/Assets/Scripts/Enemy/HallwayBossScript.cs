@@ -42,7 +42,7 @@ public class HallwayBossScript : MonoBehaviour
             {
                 if(playerXSpeed >= 0)
                 {
-                    movement.x = playerXSpeed*1.3f;
+                    movement.x = playerXSpeed*1.15f;
                     bossAttack.SetActive(true);
                 }
                 else
@@ -65,7 +65,7 @@ public class HallwayBossScript : MonoBehaviour
         {
             if(playerXSpeed > 0)
             {
-                movement.x = playerXSpeed*1.3f;
+                movement.x = playerXSpeed*1.15f;
                 bossAttack.SetActive(true);
             }
             else
