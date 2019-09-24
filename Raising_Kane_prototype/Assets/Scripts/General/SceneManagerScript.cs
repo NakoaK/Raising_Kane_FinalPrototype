@@ -15,17 +15,13 @@ public class SceneManagerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("Animatic");
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
             SceneManager.LoadScene("Boss Scene");
         }
         else if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene("Boss_Sleep");
-        }
-        else if (Input.GetKeyDown(KeyCode.U))
         {
             SceneManager.LoadScene("Running_Boss");
         }

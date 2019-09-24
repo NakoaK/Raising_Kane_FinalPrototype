@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Boss Scene.unity
     guid: ee80bf98032c98246808423bbef7119d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Boss_Sleep.unity
     guid: 8e76ce256c09aa4418f4958217f614d9
   - enabled: 1
     path: Assets/Scenes/Running_Boss.unity
     guid: ec6b4e2f0d5f94a43b37d47102f06859
+  - enabled: 1
+    path: Assets/Scenes/Animatic.unity
+    guid: f4f09477e219fc34696caf8df94243bc
   m_configObjects: {}
