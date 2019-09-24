@@ -20,6 +20,7 @@ public class Old_ComboSystem : MonoBehaviour
     public float attackY;
     public LayerMask IsEnemy;
 
+    public Animator animator;
     public Sprite attackSprite1;
     public Sprite attackSprite1_left;
     public Sprite attackSprite2;
@@ -32,7 +33,7 @@ public class Old_ComboSystem : MonoBehaviour
     public int damage;
     private float gotSpeed;
     private bool facingRight;
-    private bool isAttacking;
+    public bool isAttacking;
     //public Animator attackAnim;
 
     // COMBO STUFF
@@ -227,11 +228,13 @@ public class Old_ComboSystem : MonoBehaviour
         }
 
         isAttacking = true;
+        animator.SetBool("is_hug", isAttacking);
         musicManager.Playsound("Melee1");
 
         yield return new WaitForSecondsRealtime(.3f);
 
         isAttacking = false;
+        animator.SetBool("is_hug", isAttacking);
         playerSpriteRenderer.sprite = idleSprite;
     }
 
@@ -251,14 +254,17 @@ public class Old_ComboSystem : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         isAttacking = true;
+        animator.SetBool("is_attack1", isAttacking);
         musicManager.Playsound("Melee1");
         yield return new WaitForSecondsRealtime(.3f);
         isAttacking = false;
+        animator.SetBool("is_attack1", isAttacking);
         playerSpriteRenderer.sprite = idleSprite;
     }
 
     IEnumerator AttackAnimCo2()
     {
+        
         if (facingRight)
         {
             playerSpriteRenderer.sprite = attackSprite2;
@@ -272,9 +278,11 @@ public class Old_ComboSystem : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         isAttacking = true;
+        animator.SetBool("is_attack2", isAttacking);
         musicManager.Playsound("Melee2");
         yield return new WaitForSecondsRealtime(.6f);
         isAttacking = false;
+        animator.SetBool("is_attack2", isAttacking);
         playerSpriteRenderer.sprite = idleSprite;
 
         timeElapsed = attackDelay;

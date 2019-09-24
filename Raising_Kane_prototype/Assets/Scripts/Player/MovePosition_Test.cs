@@ -9,6 +9,8 @@ public class MovePosition_Test : MonoBehaviour
     public float speed = 10f;
     public Rigidbody2D rb;
     public Vector2 movement;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,14 @@ public class MovePosition_Test : MonoBehaviour
             movement.x = 0;
         }
         // movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (Mathf.Abs(movement.x) > 0 || Mathf.Abs(movement.y) > 0)
+        {
+            animator.SetFloat("Kane_Speed", speed);
+        }
+        else
+        {
+            animator.SetFloat("Kane_Speed", 0);
+        }
         rb.velocity = movement;
     }
 

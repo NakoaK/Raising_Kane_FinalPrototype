@@ -700,7 +700,7 @@ SpriteRenderer:
   m_SortingLayerID: 159731727
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 18f71166bd4a5484c871980f48224121, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b4590dbda5e41043ac7ac0b241197da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -888,6 +888,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1666921005450581001}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1725232471
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725232470}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50ed957740986ee4899536f50630546e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1934837477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1180,27 @@ PrefabInstance:
       propertyPath: HbOuter
       value: 
       objectReference: {fileID: 1168791373}
+    - target: {fileID: 1666921006957076820, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1725232471}
+    - target: {fileID: 1666921006957076817, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3596320468166194031, guid: 35a090e684916e04992180ed743c3d42,
+        type: 3}
+    - target: {fileID: 1666921006957076821, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666921006957076821, guid: 03369716d86663540818390ba618ba0c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03369716d86663540818390ba618ba0c, type: 3}
 --- !u!1001 &4963698120107870651
